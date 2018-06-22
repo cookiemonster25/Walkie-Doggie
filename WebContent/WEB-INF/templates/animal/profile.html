@@ -26,7 +26,7 @@
 	<!--Main layout-->
 
 	<main class="pt-2 mx-lg-5">
-	<div class="container-fluid mt-5">
+	<div class="container-fluid mt-5" style="padding-bottom: 5%">
 		<div class="card mb-4 wow fadeIn p-5">
 
 			<div>
@@ -84,6 +84,8 @@
 
 							<table class="table table-user-information">
 								<tbody>
+								<br>
+								<h6>Verträglichkeiten:</h6>
 									<tr th:each="ac : ${acs}">
 										<td th:text="${ac.name}">Name AC</td>
 										<td><i class="fa fa-check-square-o fa-lg"
@@ -96,7 +98,7 @@
 					</div>
 					<div class="col-7">
 						<table class="table table-user-information">
-							<h3 th:text="${animal.name}">Name</h3>
+							<h1 th:text="${animal.name}">Name</h1>
 							<br>
 							<tbody>
 								<tr>
@@ -167,7 +169,7 @@
 									<div class="col-3" th:each="image : ${images}"
 										th:if="${!image.profile}">
 										<a th:href="@{/animal/image(id=${image.id})}"
-											class="logo waves-effect pb-2"> <img
+											class="logo waves-effect p-2"> <img
 											th:src="@{/animal/image(id=${image.id})}"
 											onerror="this.src='../resources/default.jpg'"
 											class="img-thumbnail" style="width: 100%; height: 100%;"
